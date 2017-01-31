@@ -1,17 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  setupController(controller, model) {
-    this._super(...arguments);
-    controller.set('body', '');
-  },
+  messages: Ember.inject.service('messages'),
 
   actions: {
     inputReceived(e) {
-      this.set('controller.body', $.trim(e.target.value));
+      this.get('messages').inputReceived(e.target.value);
     },
     saveClicked() {
-      this.set('controller.body', '');
+      this.get('messages').saveClicked()
     }
   }
 });
