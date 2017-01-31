@@ -3,9 +3,7 @@ const {computed} = Ember;
 import showUnsavedWarning from '../helpers/show-unsaved-warning';
 
 export default Ember.Component.extend({
-  init() {
-    this._super(...arguments);
-  },
+  className: ['columns'],
 
   showUnsavedWarning: computed('body', showUnsavedWarning)
 });

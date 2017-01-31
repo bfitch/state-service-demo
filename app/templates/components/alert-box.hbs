@@ -1,0 +1,16 @@
+<div class="column is-offset-8">
+  <span class="tag is-medium {{if showUnsavedWarning "is-danger" "is-light"}}">Alerts</span>
+  {{#if showUnsavedWarning}}
+    <div class="box">
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>Unsaved message:</strong>
+            <br>
+            {{body}}
+          </p>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</div>

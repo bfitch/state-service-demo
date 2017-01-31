@@ -2,12 +2,16 @@
   <div class="container">
     <div class="nav-left">
       <a class="nav-item">
-        <i class="fa fa-comment" aria-hidden="true"></i>
+        <span class="icon">
+          <i class="fa fa-comment" aria-hidden="true"></i>
+        </span>
       </a>
       {{#link-to "index" class="nav-item is-tab is-hidden-mobile" activeClass="is-active"}}Home{{/link-to}}
       {{#link-to "notifications" class="nav-item is-tab is-hidden-mobile" activeClass="is-active"}}Notifications{{/link-to}}
       {{#link-to "messages.new" class="nav-item is-tab is-hidden-mobile" activeClass="is-active"}}
-        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        <span class="icon is-small">
+          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </span>
       {{/link-to}}
     </div>
   </div>

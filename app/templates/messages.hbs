@@ -1,1 +1,10 @@
-{{outlet}}
+{{alert-box body=body}}
+<div class="columns">
+  <div class="column is-offset-3 is-6">
+    {{message-composer
+      body=body
+      saveClicked=(route-action 'saveClicked')
+      inputReceived=(route-action 'inputReceived')
+    }}
+  </div>
+</div>

@@ -2,7 +2,7 @@
 <div class="control">
   <textarea
     class="textarea"
-    onKeyup={{action 'inputReceived' value="target.value"}}
+    onKeyup={{inputReceived}}
     autofocus="autofocus"
     value={{body}}>
   </textarea>
@@ -10,11 +10,14 @@
 
 {{#if showUnsavedWarning}}
   <div class="column is-one-half notification is-danger control">
-    <button class="delete"></button>
     Message could be lost. Save it now!
   </div>
 {{/if}}
 
 <div class="control">
-  <button class="button is-primary">Save</button>
+  <button
+      class="button is-primary"
+    onClick={{saveClicked}}>
+    Save
+  </button>
 </div>
