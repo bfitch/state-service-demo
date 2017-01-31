@@ -1,0 +1,20 @@
+<div class="title">Create a Message...</div>
+<div class="control">
+  <textarea
+    class="textarea"
+    onKeyup={{action 'inputReceived' value="target.value"}}
+    autofocus="autofocus"
+    value={{body}}>
+  </textarea>
+</div>
+
+{{#if showUnsavedWarning}}
+  <div class="column is-one-half notification is-danger control">
+    <button class="delete"></button>
+    Message could be lost. Save it now!
+  </div>
+{{/if}}
+
+<div class="control">
+  <button class="button is-primary">Save</button>
+</div>
